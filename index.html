@@ -1,42 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="ur">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live King TV</title>
+<title>Live King TV - Pakistan No.1 Live TV</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
 body{background:#000;color:#fff;font-family:sans-serif;margin:0}
-.header{background:linear-gradient(90deg,#FFD700,#FFA500);color:#000;padding:15px;text-align:center;font-size:22px;font-weight:bold}
-#player{width:100%;height:50vh;background:#111}
-.join-box{background:#111;border:2px solid #FFD700;margin:10px;border-radius:12px;padding:10px;text-align:center}
-.join-box a{display:block;margin:8px;padding:12px;border-radius:8px;text-decoration:none;font-weight:bold;color:#fff}
-.wa{background:#25D366} .tg{background:#0088cc}
+.header{background:linear-gradient(90deg,#FFD700,#FFA500);color:#000;padding:15px;text-align:center;font-size:24px;font-weight:bold}
+#player{width:100%;height:55vh;background:#111}
 .channels{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
 .ch{background:#1a1a1a;border:1px solid #333;border-radius:10px;padding:12px;text-align:center;cursor:pointer}
+.ch:hover{border-color:#FFD700;transform:scale(1.02)}
 .ch.active{border-color:#FFD700;background:#332a00}
+button{padding:8px 15px;margin:3px;border-radius:20px;border:none;background:#222;color:#FFD700;border:1px solid #FFD700}
 </style>
 </head>
 <body>
-<div class="header">👑 LIVE KING TV 👑</div>
+<div class="header">👑 LIVE KING TV 👑 LIVE</div>
 <video id="player" controls autoplay></video>
-<div class="join-box">
-<div style="color:#FFD700;font-weight:bold;margin-bottom:5px">🔥 JOIN KARO 🔥</div>
-<a class="wa" href="https://chat.whatsapp.com/LLKoTICOdCpEvZoJNqyeMu?s=cl&p=a&mlu=4&ilr=4">💚 WhatsApp Group</a>
-<a class="tg" href="https://t.me/khantipstrick">⚡ Telegram Channel</a>
-</div>
 <div style="padding:10px;text-align:center">
-<button onclick="loadCategory('pk')">Pakistan</button>
-<button onclick="loadCategory('sports')">Sports</button>
 <button onclick="loadCategory('news')">News</button>
+<button onclick="loadCategory('sports')">Sports</button>
+<button onclick="loadCategory('pk')">Pakistan</button>
+<button onclick="loadCategory('all')">All Channels</button>
 </div>
 <div id="list" class="channels"></div>
 <script>
-const player=document.getElementById('player');
-const listDiv=document.getElementById('list');
-const SOURCES={pk:'https://iptv-org.github.io/iptv/countries/pk.m3u',news:'https://iptv-org.github.io/iptv/categories/news.m3u',sports:'https://iptv-org.github.io/iptv/categories/sports.m3u'};
-async function loadCategory(cat){listDiv.innerHTML='Loading...';let res=await fetch(SOURCES[cat]);let text=await res.text();let lines=text.split('\n');let channels=[];for(let i=0;i<lines.length;i++){if(lines[i].startsWith('#EXTINF')){let name=lines[i].split(',')[1];let url=lines[i+1];if(url&&url.startsWith('http'))channels.push({name,url});}}channels=channels.slice(0,40);listDiv.innerHTML='';channels.forEach(c=>{let d=document.createElement('div');d.className='ch';d.innerText=c.name;d.onclick=()=>play(c.url,d);listDiv.appendChild(d);});}
-function play(url,el){document.querySelectorAll('.ch').forEach(e=>e.classList.remove('active'));if(el)el.classList.add('active');if(Hls.isSupported()){let hls=new Hls();hls.loadSource(url);hls.attachMedia(player);hls.on(Hls.Events.MANIFEST_PARSED,()=>player.play());}else{player.src=url;player.play();}}
+const player = document.getElementById('player');
+const listDiv = document.getElementById('list');
+const SOURCES = {
+  pk: 'https://iptv-org.github.io/iptv/countries/pk.m3u',
+  news: 'https://iptv-org.github.io/iptv/categories/news.m3u',
+  sports: 'https://iptv-org.github.io/iptv/categories/sports.m3u',
+  all: 'https://iptv-org.github.io/iptv/index.m3u'
+};
+async function loadCategory(cat){
+  listDiv.innerHTML = 'Loading...';
+  let res = await fetch(SOURCES[cat]);
+  let text = await res.text();
+  let lines = text.split('\n');
+  let channels = [];
+  for(let i=0;i<lines.length;i++){
+    if(lines[i].startsWith('#EXTINF')){
+      let name = lines[i].split(',')[1];
+      let url = lines[i+1];
+      if(url && url.startsWith('http')) channels.push({name,url});
+    }
+  }
+  channels = channels.slice(0,50);
+  listDiv.innerHTML = '';
+  channels.forEach(c=>{
+    let d = document.createElement('div');
+    d.className='ch'; d.innerText=c.name;
+    d.onclick=()=>play(c.url,d);
+    listDiv.appendChild(d);
+  });
+}
+function play(url,el){
+  document.querySelectorAll('.ch').forEach(e=>e.classList.remove('active'));
+  if(el) el.classList.add('active');
+  if(Hls.isSupported()){
+    let hls = new Hls();
+    hls.loadSource(url);
+    hls.attachMedia(player);
+    hls.on(Hls.Events.MANIFEST_PARSED,()=>player.play());
+  } else {
+    player.src = url; player.play();
+  }
+}
 loadCategory('pk');
 </script>
 </body>

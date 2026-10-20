@@ -1,50 +1,4 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Live King TV - Pak Sports + Movies</title>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<style>
-body{background:#000;color:#fff;margin:0;font-family:sans-serif}
-.h{background:linear-gradient(90deg,gold,orange);color:#000;padding:14px;text-align:center;font-weight:900;font-size:22px;position:sticky;top:0;z-index:10}
-.social{display:flex;justify-content:center;gap:8px;padding:12px;background:#111;border-bottom:2px solid gold;flex-wrap:wrap}
-.b{padding:10px 18px;border-radius:30px;color:#fff;text-decoration:none;font-weight:800;font-size:13px}
-.w{background:#25D366} .t{background:#0088cc}
-#v-wrap{position:relative;width:100%;height:50vh;background:#000}
-#v{width:100%;height:100%;background:#000}
-#pip-btn{position:absolute;bottom:10px;right:10px;background:gold;color:#000;border:none;padding:10px 16px;border-radius:30px;font-weight:900;cursor:pointer;z-index:5}
-.s{width:92%;display:block;margin:12px auto;padding:13px;border-radius:30px;border:2px solid gold;background:#1a1a1a;color:#fff;text-align:center}
-.box-title{padding:12px 15px;font-weight:900;font-size:16px;color:#fff;margin:15px 8px 5px;border-radius:10px;text-align:center}
-.jazz-title{background:#FF9800;color:#000}
-.ptv-title{background:#00E676;color:#000}
-.mov-title{background:#E040FB;color:#fff}
-.g{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px}
-.c{background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:10px;text-align:center;cursor:pointer}
-.c img{width:75px;height:55px;object-fit:contain;background:#fff;border-radius:10px;padding:3px}
-.c p{font-size:11px;margin:6px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.c.active{border-color:gold;background:#332a00;box-shadow:0 0 15px gold}
-</style></head>
-<body>
-<div class="h">👑 LIVE KING TV - SPORTS + MOVIES</div>
-<div class="social">
-<a class="b w" href="https://chat.whatsapp.com/LLKoTICOdCpEvZoJNqyeMu?s=cl&p=a&mlu=4&ilr=4" target="_blank">📱 WhatsApp</a>
-<a class="b t" href="https://t.me/khantipstrick" target="_blank">✈️ Telegram</a>
-</div>
-<div id="v-wrap">
-<video id="v" controls muted autoplay playsinline></video>
-<button id="pip-btn" onclick="doPiP()">🔲 FLOATING TV</button>
-</div>
-<input id="q" class="s" placeholder="🔍 Search..." oninput="filt()">
-
-<div class="box-title jazz-title">📦 BOX 1: JAZZ FREE LIVE - OLD WALA</div>
-<div id="g-jazz" class="g"></div>
-
-<div class="box-title ptv-title">📦 BOX 2: ALL PAKISTANI SPORTS</div>
-<div id="g-sports" class="g"></div>
-
-<div class="box-title mov-title">📦 BOX 3: PAKISTANI MOVIES / MUSIC</div>
-<div id="g-mov" class="g"></div>
-
-<script>
-function doPiP(){if(document.pictureInPictureElement){document.exitPictureInPicture();return;}if(v.readyState==0){alert("پہلے چینل چلاؤ سائیں!");return;}v.requestPictureInPicture();}
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Live King TV - Full 21 Channels</title><script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><style>body{background:#000;color:#fff;margin:0;font-family:sans-serif}.h{background:linear-gradient(90deg,gold,orange);color:#000;padding:14px;text-align:center;font-weight:900;font-size:22px;position:sticky;top:0;z-index:10}#v-wrap{position:relative;width:100%;height:50vh;background:#000}#v{width:100%;height:100%}#pip-btn{position:absolute;bottom:10px;right:10px;background:gold;color:#000;border:none;padding:10px 16px;border-radius:30px;font-weight:900}.s{width:92%;display:block;margin:12px auto;padding:12px;border-radius:30px;border:2px solid gold;background:#1a1a1a;color:#fff;text-align:center}.box-title{padding:12px;font-weight:900;font-size:16px;margin:15px 8px 5px;border-radius:10px;text-align:center}.jazz-title{background:#FF9800;color:#000}.ptv-title{background:#00E676;color:#000}.mov-title{background:#E040FB;color:#fff}.g{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px}.c{background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:10px;text-align:center}.c img{width:75px;height:55px;object-fit:contain;background:#fff;border-radius:10px;padding:3px}.c p{font-size:11px;margin:6px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.c.active{border-color:gold;background:#332a00}</style></head><body><div class="h">👑 LIVE KING TV - 21 CHANNELS</div><div id="v-wrap"><video id="v" controls muted autoplay playsinline></video><button id="pip-btn" onclick="if(!document.pictureInPictureElement&&v.readyState>0)v.requestPictureInPicture()">🔲 FLOATING TV</button></div><input id="q" class="s" placeholder="🔍 Search..." oninput="filt()"><div class="box-title jazz-title">📦 BOX 1: JAZZ OLD - 9 CHANNELS</div><div id="g-jazz" class="g"></div><div class="box-title ptv-title">📦 BOX 2: PAK SPORTS - 6 CHANNELS</div><div id="g-sports" class="g"></div><div class="box-title mov-title">📦 BOX 3: PAK MOVIES/MUSIC - 8 CHANNELS</div><div id="g-mov" class="g"></div><script>
 var JAZZ=[
 {n:"ARY Digital",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ary-digital-live-logo.webp?id=51",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYdigital-abr/playlist.m3u8"},
 {n:"Hum TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/HUM-TV-Channel-logo.webp?id=30",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/humTV-abr/playlist.m3u8"},
@@ -53,14 +7,16 @@ var JAZZ=[
 {n:"Geo News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-news-live.webp?id=80",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/geoNews-abr/playlist.m3u8"},
 {n:"Express News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1702552162-logo.webp?id=22",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/expressnews-abr/playlist.m3u8"},
 {n:"Green TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/1702552123-logo.webp?id=17",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Green_Entertainment-abr/playlist.m3u8"},
-{n:"Bol News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-news-live.webp?id=87",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BolNews-abr/playlist.m3u8"}
+{n:"Bol News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-news-live.webp?id=87",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BolNews-abr/playlist.m3u8"},
+{n:"Dunya News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/dunya-news-live.webp?id=88",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/DunyaNews-abr/playlist.m3u8"}
 ];
 var SPORTS=[
 {n:"PTV Sports HD",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321954030.webp?id=31",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/PTVSports-abr/playlist.m3u8"},
 {n:"Ten Sports HD",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=64",u:"https://cdn4aws.tamashaweb.com/out/v1/fae477677d214561b1601c23c95fe20a/index.m3u8"},
 {n:"A Sports HD",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/a-sports-hd-live.webp?id=68",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ASports-abr/playlist.m3u8"},
 {n:"Geo Super",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-super-live.webp?id=66",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/GeoSuper-abr/playlist.m3u8"},
-{n:"ASIA CUP / PSL LIVE",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1756982709555.webp?id=16",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"}
+{n:"PSL / Asia Cup LIVE",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1756982709555.webp?id=16",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"},
+{n:"Ten Cricket",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=64",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/TenSports-abr/playlist.m3u8"}
 ];
 var MOVIES=[
 {n:"8XM Music",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/8xm-live.webp?id=92",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/8xm-abr/playlist.m3u8"},
@@ -72,13 +28,10 @@ var MOVIES=[
 {n:"LTN Family",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ltn-family-live.webp?id=35",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/LTN-abr/playlist.m3u8"},
 {n:"Cartoon Network",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/cartoon-network-live.webp?id=41",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"}
 ];
-var v=document.getElementById('v');
-var gJ=document.getElementById('g-jazz'), gS=document.getElementById('g-sports'), gM=document.getElementById('g-mov');
-var hls=null;
-function makeCard(ch){var d=document.createElement('div');d.className='c';d.innerHTML='<img src="'+ch.l+'" onerror="this.src=\'https://via.placeholder.com/75x55/fff/000?text=TV\'"><p>'+ch.n+'</p>';d.onclick=function(){play(ch.u,d)};return d;}
-function render(){gJ.innerHTML='';gS.innerHTML='';gM.innerHTML='';JAZZ.forEach(function(c){gJ.appendChild(makeCard(c))});SPORTS.forEach(function(c){gS.appendChild(makeCard(c))});MOVIES.forEach(function(c){gM.appendChild(makeCard(c))});}
-function play(url,el){document.querySelectorAll('.c').forEach(function(x){x.classList.remove('active')});if(el)el.classList.add('active');if(hls){hls.destroy();hls=null;}if(Hls.isSupported()){hls=new Hls();hls.loadSource(url);hls.attachMedia(v);hls.on(Hls.Events.MANIFEST_PARSED,function(){v.muted=false;v.play();});}else{v.src=url;v.play();}window.scrollTo({top:0,behavior:'smooth'});}
-function filt(){var q=document.getElementById('q').value.toLowerCase();var all=[...JAZZ,...SPORTS,...MOVIES];gJ.innerHTML='';gS.innerHTML='';gM.innerHTML='';if(q==""){render();return;}all.filter(function(c){return c.n.toLowerCase().indexOf(q)>-1}).forEach(function(c){gM.appendChild(makeCard(c))});}
-render();play(SPORTS[0].u,null);
-</script>
-</body></html>
+var v=document.getElementById('v'),gJ=document.getElementById('g-jazz'),gS=document.getElementById('g-sports'),gM=document.getElementById('g-mov'),hls=null;
+function mk(c){var d=document.createElement('div');d.className='c';d.innerHTML='<img src="'+c.l+'" onerror="this.src=\'https://via.placeholder.com/75x55/fff/000?text=TV\'"><p>'+c.n+'</p>';d.onclick=function(){pl(c.u,d)};return d}
+function render(){gJ.innerHTML='';gS.innerHTML='';gM.innerHTML='';JAZZ.forEach(function(a){gJ.appendChild(mk(a))});SPORTS.forEach(function(a){gS.appendChild(mk(a))});MOVIES.forEach(function(a){gM.appendChild(mk(a))})}
+function pl(u,e){document.querySelectorAll('.c').forEach(function(x){x.classList.remove('active')});if(e)e.classList.add('active');if(hls){hls.destroy();hls=null}if(Hls.isSupported()){hls=new Hls();hls.loadSource(u);hls.attachMedia(v);hls.on(Hls.Events.MANIFEST_PARSED,function(){v.muted=false;v.play()})}else{v.src=u;v.play()}window.scrollTo({top:0,behavior:'smooth'})}
+function filt(){var q=document.getElementById('q').value.toLowerCase();var all=[...JAZZ,...SPORTS,...MOVIES];gJ.innerHTML='';gS.innerHTML='';gM.innerHTML='';if(q==""){render();return}all.filter(function(c){return c.n.toLowerCase().indexOf(q)>-1}).forEach(function(c){gM.appendChild(mk(c))})}
+render();pl(SPORTS[0].u,null);
+</script></body></html>

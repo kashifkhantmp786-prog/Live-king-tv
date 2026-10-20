@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Live King TV - All Indian</title>
+<title>Live King TV - 3 BOX FINAL</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
 body{background:#000;color:#fff;margin:0;font-family:sans-serif}
@@ -12,10 +12,10 @@ body{background:#000;color:#fff;margin:0;font-family:sans-serif}
 #v{width:100%;height:100%;background:#000}
 #pip-btn{position:absolute;bottom:10px;right:10px;background:gold;color:#000;border:none;padding:10px 16px;border-radius:30px;font-weight:900;cursor:pointer;z-index:5}
 .s{width:92%;display:block;margin:12px auto;padding:13px;border-radius:30px;border:2px solid gold;background:#1a1a1a;color:#fff;text-align:center}
-.box-title{padding:10px 15px;font-weight:900;font-size:16px;color:#000;margin:15px 8px 5px;border-radius:10px}
-.jazz-title{background:linear-gradient(90deg,#FFD700,#FFA500)}
-.ptv-title{background:linear-gradient(90deg,#00FF88,#00CCFF)}
-.ind-title{background:linear-gradient(90deg,#FF6B6B,#FFA500)}
+.box-title{padding:12px 15px;font-weight:900;font-size:16px;color:#fff;margin:15px 8px 5px;border-radius:10px;text-align:center}
+.jazz-title{background:#FF9800;color:#000}
+.ptv-title{background:#00E676;color:#000}
+.ind-title{background:#FF1744;color:#fff}
 .g{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px}
 .c{background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:10px;text-align:center;cursor:pointer}
 .c img{width:75px;height:55px;object-fit:contain;background:#fff;border-radius:10px;padding:3px}
@@ -23,7 +23,7 @@ body{background:#000;color:#fff;margin:0;font-family:sans-serif}
 .c.active{border-color:gold;background:#332a00;box-shadow:0 0 15px gold}
 </style></head>
 <body>
-<div class="h">👑 LIVE KING TV - ALL INDIAN</div>
+<div class="h">👑 LIVE KING TV - 3 BOX</div>
 <div class="social">
 <a class="b w" href="https://chat.whatsapp.com/LLKoTICOdCpEvZoJNqyeMu?s=cl&p=a&mlu=4&ilr=4" target="_blank">📱 WhatsApp</a>
 <a class="b t" href="https://t.me/khantipstrick" target="_blank">✈️ Telegram</a>
@@ -34,15 +34,15 @@ body{background:#000;color:#fff;margin:0;font-family:sans-serif}
 <button id="pip-btn" onclick="doPiP()">🔲 FLOATING TV</button>
 </div>
 
-<input id="q" class="s" placeholder="🔍 Search Indian / Sports / Movies..." oninput="filt()">
+<input id="q" class="s" placeholder="🔍 Search..." oninput="filt()">
 
-<div class="box-title jazz-title">📦 BOX 1: JAZZ FREE LIVE (Pak)</div>
+<div class="box-title jazz-title">📦 BOX 1: JAZZ FREE LIVE - PAK</div>
 <div id="g-jazz" class="g"></div>
 
-<div class="box-title ptv-title">📦 BOX 2: SPORTS - NEVER EXPIRE</div>
+<div class="box-title ptv-title">📦 BOX 2: PTV / OTHER - NEVER EXPIRE</div>
 <div id="g-ptv" class="g"></div>
 
-<div class="box-title ind-title">📦 BOX 3: ALL INDIAN - MOVIES + SPORTS + ENTERTAINMENT</div>
+<div class="box-title ind-title">📦 BOX 3: ALL INDIAN - MOVIES + SPORTS + ENTERTAINMENT - 16 CHANNELS</div>
 <div id="g-ind" class="g"></div>
 
 <script>
@@ -55,35 +55,32 @@ function doPiP(){
 var JAZZ=[
 {n:"ARY Digital",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ary-digital-live-logo.webp?id=51",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYdigital-abr/playlist.m3u8"},
 {n:"Hum TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/HUM-TV-Channel-logo.webp?id=30",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/humTV-abr/playlist.m3u8"},
-{n:"Geo Ent",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-entertainment-live.webp?id=98",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/GeoEntertainment-abr/playlist.m3u8"},
 {n:"ARY News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/1684242189-logo.webp?id=58",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYnews-abr/playlist.m3u8"},
-{n:"Geo News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-news-live.webp?id=80",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/geoNews-abr/playlist.m3u8"}
+{n:"Geo News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-news-live.webp?id=80",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/geoNews-abr/playlist.m3u8"},
+{n:"Bol News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-news-live.webp?id=87",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BolNews-abr/playlist.m3u8"},
+{n:"8XM",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/8xm-live.webp?id=92",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/8xm-abr/playlist.m3u8"},
+{n:"Cartoon Network",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/cartoon-network-live.webp?id=41",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"},
+{n:"Green TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/1702552123-logo.webp?id=17",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Green_Entertainment-abr/playlist.m3u8"}
 ];
-
 var PTV=[
 {n:"Ten Sports HD",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=64",u:"https://cdn4aws.tamashaweb.com/out/v1/fae477677d214561b1601c23c95fe20a/index.m3u8"},
 {n:"ASIA CUP LIVE",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1756982709555.webp?id=16",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"},
 {n:"PTV Sports",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321954030.webp?id=31",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/PTVSports-abr/playlist.m3u8"},
-{n:"Star Sports 1",l:"https://i.imgur.com/8Km9tLL.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/StarSports-abr/playlist.m3u8"},
-{n:"Sony Sports Ten 1",l:"https://i.imgur.com/8Km9tLL.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SonyTen1-abr/playlist.m3u8"}
+{n:"Makkah Live",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/saudi-quran-makkah-tv-hd-live.webp?id=43",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Saudimakkah(nw)-abr/playlist.m3u8"}
 ];
-
 var INDIAN=[
 {n:"Star Plus",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321980008.webp?id=50",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/StarPlus-abr/playlist.m3u8"},
-{n:"Star Gold (Movies)",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/StarGold-abr/playlist.m3u8"},
-{n:"Sony Max (Movies)",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SonyMax-abr/playlist.m3u8"},
-{n:"Zee Cinema (Movies)",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ZeeCinema-abr/playlist.m3u8"},
+{n:"Star Gold Movies",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321527004.webp?id=48",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/StarGold-abr/playlist.m3u8"},
+{n:"Sony Max Movies",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321840001.webp?id=49",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SonyMax-abr/playlist.m3u8"},
 {n:"Colors TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321840001.webp?id=49",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Colors-abr/playlist.m3u8"},
 {n:"Sony TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321527004.webp?id=48",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Sony-abr/playlist.m3u8"},
 {n:"Zee TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321880002.webp?id=47",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ZeeTV-abr/playlist.m3u8"},
-{n:"Sony SAB",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SonySAB-abr/playlist.m3u8"},
-{n:"Star Bharat",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/StarBharat-abr/playlist.m3u8"},
-{n:"Aaj Tak",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_720p/chunks.m3u8"},
-{n:"NDTV India",l:"https://i.imgur.com/mXxQw4K.png",u:"https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/ndtvindialive/live_720p/chunks.m3u8"},
-{n:"Republic Bharat",l:"https://i.imgur.com/3ZQ3Z9y.png",u:"https://republicworldlive.akamaized.net/hls/live/2016427/republicworldlive/live_720p/chunks.m3u8"},
-{n:"Cartoon Network India",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/cartoon-network-live.webp?id=41",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"},
-{n:"Pogo India",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Pogo-abr/playlist.m3u8"},
-{n:"Discovery India",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Discovery-abr/playlist.m3u8"}
+{n:"Sony SAB",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321510303.webp?id=52",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SonySAB-abr/playlist.m3u8"},
+{n:"Aaj Tak",l:"https://upload.wikimedia.org/wikipedia/commons/5/59/Aaj_Tak_logo.png",u:"https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_720p/chunks.m3u8"},
+{n:"NDTV India",l:"https://upload.wikimedia.org/wikipedia/commons/5/58/NDTV_logo.png",u:"https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/ndtvindialive/live_720p/chunks.m3u8"},
+{n:"Republic Bharat",l:"https://upload.wikimedia.org/wikipedia/commons/0/0f/Republic_Bharat_logo.png",u:"https://republicworldlive.akamaized.net/hls/live/2016427/republicworldlive/live_720p/chunks.m3u8"},
+{n:"Star Sports 1",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=64",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/StarSports-abr/playlist.m3u8"},
+{n:"Discovery India",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321510303.webp?id=52",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Discovery-abr/playlist.m3u8"}
 ];
 
 var v=document.getElementById('v');
@@ -91,7 +88,7 @@ var gJ=document.getElementById('g-jazz'), gP=document.getElementById('g-ptv'), g
 var hls=null;
 function makeCard(ch){
   var d=document.createElement('div');d.className='c';
-  d.innerHTML='<img src="'+ch.l+'" onerror="this.src=\'https://via.placeholder.com/75?text=TV\'"><p>'+ch.n+'</p>';
+  d.innerHTML='<img src="'+ch.l+'" onerror="this.src=\'https://via.placeholder.com/75x55/fff/000?text='+ch.n.charAt(0)+'\'"><p>'+ch.n+'</p>';
   d.onclick=function(){play(ch.u,d)};
   return d;
 }

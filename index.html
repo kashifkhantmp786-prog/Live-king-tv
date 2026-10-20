@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Live King TV - Only Working Channels</title>
+<title>Live King TV - FIXED 100%</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <style>
 body{background:#000;color:#fff;margin:0;font-family:sans-serif}
 .h{background:linear-gradient(90deg,gold,orange);color:#000;padding:14px;text-align:center;font-weight:900;font-size:22px;position:sticky;top:0;z-index:10}
 .social{display:flex;justify-content:center;gap:10px;padding:12px;background:#111;border-bottom:2px solid gold;flex-wrap:wrap}
-.b{padding:11px 20px;border-radius:30px;color:#fff;text-decoration:none;font-weight:800}
+.b{padding:11px 20px;border-radius:30px;color:#fff;text-decoration:none;font-weight:800;font-size:14px}
 .w{background:#25D366} .t{background:#0088cc}
 #v{width:100%;height:50vh;background:#000}
 .s{width:92%;display:block;margin:12px auto;padding:13px;border-radius:30px;border:2px solid gold;background:#1a1a1a;color:#fff;text-align:center}
-.title{padding:10px 15px;font-weight:900;font-size:18px;color:#000;margin:15px 8px 5px;border-radius:10px}
-.pak{background:linear-gradient(90deg,#00FF88,#00CCFF)}
-.ind{background:linear-gradient(90deg,#FF6B6B,#FFA500)}
-.sports{background:linear-gradient(90deg,gold,orange)}
-.g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px}
-@media(max-width:600px){.g{grid-template-columns:repeat(2,1fr)}}
+.box-title{padding:10px 15px;font-weight:900;font-size:16px;color:#000;margin:15px 8px 5px;border-radius:10px}
+.jazz-title{background:linear-gradient(90deg,#FFD700,#FFA500)}
+.ptv-title{background:linear-gradient(90deg,#00FF88,#00CCFF)}
+.g{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px}
 .c{background:#1a1a1a;border:1px solid #333;border-radius:14px;padding:10px;text-align:center;cursor:pointer}
 .c img{width:75px;height:55px;object-fit:contain;background:#fff;border-radius:10px;padding:3px}
 .c p{font-size:11px;margin:6px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .c.active{border-color:gold;background:#332a00;box-shadow:0 0 15px gold}
 </style></head>
 <body>
-<div class="h">👑 LIVE KING TV - ONLY WORKING</div>
+<div class="h">👑 LIVE KING TV - FIXED</div>
 <div class="social">
 <a class="b w" href="https://chat.whatsapp.com/LLKoTICOdCpEvZoJNqyeMu?s=cl&p=a&mlu=4&ilr=4" target="_blank">📱 WhatsApp</a>
 <a class="b t" href="https://t.me/khantipstrick" target="_blank">✈️ Telegram</a>
 </div>
 <video id="v" controls muted autoplay playsinline></video>
-<input id="q" class="s" placeholder="🔍 Search..." oninput="filt()">
+<input id="q" class="s" placeholder="🔍 Search Channel..." oninput="filt()">
 
-<div class="title sports">🏏 SPORTS - 100% WORKING - NEVER EXPIRE</div>
-<div id="g-sports" class="g"></div>
+<div class="box-title jazz-title">📦 BOX 1: JAZZ FREE LIVE - 10 CHANNELS</div>
+<div id="g-jazz" class="g"></div>
 
-<div class="title pak">🇵🇰 PAKISTAN - WORKING</div>
-<div id="g-pak" class="g"></div>
-
-<div class="title ind">🇮🇳 INDIA + NEWS - WORKING</div>
-<div id="g-ind" class="g"></div>
+<div class="box-title ptv-title">📦 BOX 2: PTV / OTHER - NEVER EXPIRE - 6 CHANNELS</div>
+<div id="g-ptv" class="g"></div>
 
 <script>
-var SPORTS=[
-{n:"Ten Sports HD",l:"https://i.imgur.com/8Km9tLL.png",u:"https://cdn4aws.tamashaweb.com/out/v1/fae477677d214561b1601c23c95fe20a/index.m3u8"},
-{n:"ASIA CUP LIVE",l:"https://i.imgur.com/8Km9tLL.png",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"},
-{n:"EPL Live",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/TMSH-1724158879315.webp?id=28",u:"https://cdn06khi.tamashaweb.com:8087/YlUHeDQb7a/EPL-A-abr/playlist.m3u8"}
+var JAZZ=[
+{n:"ARY Digital",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ary-digital-live-logo.webp?id=51",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYdigital-abr/playlist.m3u8"},
+{n:"Geo Entertainment",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-entertainment-live.webp?id=98",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/GeoEntertainment-abr/playlist.m3u8"},
+{n:"Hum TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/HUM-TV-Channel-logo.webp?id=30",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/humTV-abr/playlist.m3u8"},
+{n:"ARY News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/1684242189-logo.webp?id=58",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYnews-abr/playlist.m3u8"},
+{n:"Geo News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/geo-news-live.webp?id=80",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/geoNews-abr/playlist.m3u8"},
+{n:"Samaa TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/samaa-tv-live.webp?id=13",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/samaaTV-abr/playlist.m3u8"},
+{n:"Bol News",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/bol-news-live.webp?id=87",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BolNews-abr/playlist.m3u8"},
+{n:"8XM",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/8xm-live.webp?id=92",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/8xm-abr/playlist.m3u8"},
+{n:"Cartoon Network",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/cartoon-network-live.webp?id=41",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"},
+{n:"Green TV",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/1702552123-logo.webp?id=17",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Green_Entertainment-abr/playlist.m3u8"}
 ];
-var PAK=[
-{n:"PTV Sports",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321954030.webp?id=31",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/PTVSports-abr/playlist.m3u8"},
-{n:"Madni Channel",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/madani-channel-live.webp?id=59",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Madni-abr/playlist.m3u8"},
-{n:"Makkah Live",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/saudi-quran-makkah-tv-hd-live.webp?id=43",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Saudimakkah(nw)-abr/playlist.m3u8"},
-{n:"GNN",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/gnn-live.webp?id=68",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/GNN-abr/playlist.m3u8"},
-{n:"City 42",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/city-42-live.webp?id=97",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/city42(vnw)-abr/playlist.m3u8"}
-];
-var INDIA=[
-{n:"Aaj Tak",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_720p/chunks.m3u8"},
-{n:"NDTV India",l:"https://i.imgur.com/mXxQw4K.png",u:"https://ndtvindiaelemarchana.akamaized.net/hls/live/2003679/ndtvindia/ndtvindialive/live_720p/chunks.m3u8"},
+var PTV=[
+{n:"Ten Sports HD",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/ten-sports-hd-logo.webp?id=64",u:"https://cdn4aws.tamashaweb.com/out/v1/fae477677d214561b1601c23c95fe20a/index.m3u8"},
+{n:"ASIA CUP LIVE",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1756982709555.webp?id=16",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"},
+{n:"Aaj Tak (India)",l:"https://i.imgur.com/Qp6mE9y.png",u:"https://aajtaklive-amd.akamaized.net/hls/live/2014416/aajtak/aajtaklive/live_720p/chunks.m3u8"},
 {n:"Republic Bharat",l:"https://i.imgur.com/3ZQ3Z9y.png",u:"https://republicworldlive.akamaized.net/hls/live/2016427/republicworldlive/live_720p/chunks.m3u8"},
-{n:"Cartoon Network India",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/cartoon-network-live.webp?id=41",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"}
+{n:"PTV Sports",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/1750321954030.webp?id=31",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/PTVSports-abr/playlist.m3u8"},
+{n:"Makkah Live",l:"https://canvas.tamashaweb.com/jazzlive/uploads/channels/logo/saudi-quran-makkah-tv-hd-live.webp?id=43",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Saudimakkah(nw)-abr/playlist.m3u8"}
 ];
 
 var v=document.getElementById('v');
-var gS=document.getElementById('g-sports'), gP=document.getElementById('g-pak'), gI=document.getElementById('g-ind');
+var gJ=document.getElementById('g-jazz'), gP=document.getElementById('g-ptv');
 var hls=null;
 function makeCard(ch){
   var d=document.createElement('div');d.className='c';
@@ -69,10 +66,9 @@ function makeCard(ch){
   return d;
 }
 function render(){
-  gS.innerHTML=''; gP.innerHTML=''; gI.innerHTML='';
-  SPORTS.forEach(function(c){gS.appendChild(makeCard(c))});
-  PAK.forEach(function(c){gP.appendChild(makeCard(c))});
-  INDIA.forEach(function(c){gI.appendChild(makeCard(c))});
+  gJ.innerHTML=''; gP.innerHTML='';
+  JAZZ.forEach(function(c){gJ.appendChild(makeCard(c))});
+  PTV.forEach(function(c){gP.appendChild(makeCard(c))});
 }
 function play(url,el){
   document.querySelectorAll('.c').forEach(function(x){x.classList.remove('active')});
@@ -84,14 +80,12 @@ function play(url,el){
 }
 function filt(){
   var q=document.getElementById('q').value.toLowerCase();
-  var all=[...SPORTS,...PAK,...INDIA];
-  gS.innerHTML=''; gP.innerHTML=''; gI.innerHTML='';
+  var all=[...JAZZ,...PTV];
+  gJ.innerHTML=''; gP.innerHTML='';
   if(q==""){render();return;}
-  all.filter(function(c){return c.n.toLowerCase().indexOf(q)>-1}).forEach(function(c){
-    gS.appendChild(makeCard(c));
-  });
+  all.filter(function(c){return c.n.toLowerCase().indexOf(q)>-1}).forEach(function(c){gJ.appendChild(makeCard(c))});
 }
 render();
-play(SPORTS[0].u,null);
+play(PTV[0].u,null);
 </script>
 </body></html>

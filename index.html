@@ -1,89 +1,54 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JAZZ FREE TV BY MR KASHIF KHAN - 99 FINAL</title><script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script><style>body{background:#000;color:#fff;margin:0;font-family:sans-serif}.h{background:linear-gradient(90deg,#FFD700,#FF9500);color:#000;padding:15px;text-align:center;font-weight:900;font-size:18px;position:sticky;top:0;z-index:1000}.links{background:#111;padding:10px;display:flex;justify-content:center;gap:8px;position:sticky;top:48px;z-index:999}.btn{padding:10px 18px;border-radius:25px;text-decoration:none;font-weight:900;font-size:12px}.btn-wa{background:#25D366;color:#fff}.btn-tg{background:#0088cc;color:#fff}#vw{position:sticky;top:98px;height:36vh;background:#000;border-bottom:2px solid gold}#v{width:100%;height:100%}.s{width:92%;display:block;margin:10px auto;padding:10px;border-radius:20px;border:2px solid gold;background:#111;color:#fff;text-align:center}.g{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px}.c{background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:10px;text-align:center;cursor:pointer;font-size:10px;font-weight:700}.c.active{border-color:gold;background:#332a00;color:gold}</style></head><body><div class="h">👑 JAZZ FREE TV BY MR KASHIF KHAN 👑</div><div class="links"><a class="btn btn-wa" href="https://chat.whatsapp.com/LLKoTICOdCpEvZoJNqyeMu?s=cl&p=a&mlu=4&ilr=4" target="_blank">📱 WhatsApp</a><a class="btn btn-tg" href="https://t.me/khantipstrick" target="_blank">✈️ Telegram</a></div><div id="vw"><video id="v" controls autoplay playsinline></video></div><input id="q" class="s" placeholder="🔍 Search 99 Channels..." oninput="fil()"><div id="list" class="g"></div><script>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JAZZ FREE TV BY MR KASHIF KHAN - FIXED PLAYER</title><script src="https://cdn.jsdelivr.net/npm/hls.js@1.4.12/dist/hls.min.js"></script><style>body{background:#000;color:#fff;margin:0;font-family:sans-serif}.h{background:linear-gradient(90deg,#FFD700,#FF9500);color:#000;padding:12px;text-align:center;font-weight:900;font-size:16px;position:sticky;top:0;z-index:1000}.links{background:#111;padding:8px;display:flex;justify-content:center;gap:8px;position:sticky;top:42px;z-index:999}.btn{padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:900;font-size:12px}.btn-wa{background:#25D366;color:#fff}.btn-tg{background:#0088cc;color:#fff}#vw{position:sticky;top:84px;height:38vh;background:#000;border-bottom:2px solid gold;display:flex;align-items:center;justify-content:center}#v{width:100%;height:100%;background:#000}.s{width:92%;display:block;margin:10px auto;padding:10px;border-radius:20px;border:2px solid gold;background:#111;color:#fff;text-align:center}.g{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px}.c{background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:12px 5px;text-align:center;cursor:pointer;font-size:10px;font-weight:700}.c.active{border-color:gold;background:gold;color:#000}#msg{position:absolute;color:#fff;background:rgba(0,0,0,0.7);padding:10px;border-radius:10px;z-index:5;font-size:12px}</style></head><body><div class="h" id="title">👑 JAZZ FREE TV BY MR KASHIF KHAN 👑</div><div class="links"><a class="btn btn-wa" href="https://chat.whatsapp.com/LLKoTICOdCpEvZoJNqyeMu?s=cl&p=a&mlu=4&ilr=4" target="_blank">WhatsApp</a><a class="btn btn-tg" href="https://t.me/khantipstrick" target="_blank">Telegram</a></div><div id="vw"><div id="msg">Click Any Channel Below 👇</div><video id="v" controls muted playsinline crossorigin="anonymous"></video></div><input id="q" class="s" placeholder="Search 99 Channels..." oninput="fil()"><div id="list" class="g"></div><script>
 var ALL=[
+{n:"Ten Sports HD ✅",u:"https://cdn4aws.tamashaweb.com/out/v1/fae477677d214561b1601c23c95fe20a/index.m3u8"},
+{n:"ASIA CUP ✅",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"},
+{n:"ASIA CUP Ads Free ✅",u:"https://cdn5aws.tamashaweb.com/out/v1/9fff7780125a4614a7f3567bc506dc7a/index_5.m3u8"},
+{n:"EPL ✅",u:"https://cdn06khi.tamashaweb.com:8087/YlUHeDQb7a/EPL-A-abr/playlist.m3u8"},
+{n:"Eurosport",u:"https://cdn22lhr.tamashaweb.com:8087/jazzauth/Eurosport-abr/playlist.m3u8"},
+{n:"PTV Sports",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/PTVSports-abr/playlist.m3u8"},
 {n:"Green Ent",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Green_Entertainment-abr/playlist.m3u8"},
 {n:"ARY Digital",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYdigital-abr/playlist.m3u8"},
 {n:"Geo Ent",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/GeoEntertainment-abr/playlist.m3u8"},
 {n:"Hum TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/humTV-abr/playlist.m3u8"},
-{n:"ARY Zindagi",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYzindagi-abr/playlist.m3u8"},
-{n:"Play TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/play-abr/playlist.m3u8"},
-{n:"Aaj Ent",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/AajEntertainment-abr/playlist.m3u8"},
-{n:"See TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/seeTV-abr/playlist.m3u8"},
-{n:"Urdu1",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/urdu-1-abr/playlist.m3u8"},
-{n:"AurLife",u:"https://cdn12isb.tamashaweb.com:8087/jazzauth/AurLife-abr/playlist.m3u8"},
-{n:"Bol Ent",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BolEntertainment-abr/playlist.m3u8"},
-{n:"Express Ent",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ExpressEntertainment-abr/playlist.m3u8"},
-{n:"Sab TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SabTV-abr/playlist.m3u8"},
-{n:"AAN TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/AAN-TV-abr/playlist.m3u8"},
-{n:"Hum Sitaray",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/HumSitaray-abr/playlist.m3u8"},
-{n:"Set Ent",u:"https://cdn23lhr.tamashaweb.com:8087/YlUHeDQb7a/SetEntertainment-abr/live/vsat-setent-L/chunks.m3u8"},
-{n:"TV One",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/TVOne-abr/playlist.m3u8"},
-{n:"A Plus",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Aplus-abr/playlist.m3u8"},
-{n:"KTN Ent",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ktnEntertainment-abr/playlist.m3u8"},
-{n:"Kashish TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/KashishTV-abr/playlist.m3u8"},
-{n:"Sindh TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/sindhTV-abr/playlist.m3u8"},
-{n:"LTN Family",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/LTNFamily-abr/playlist.m3u8"},
-{n:"Apna TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Apna-abr/playlist.m3u8"},
-{n:"Film World",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/filmworld-abr/playlist.m3u8"},
-{n:"Filmax",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Filmax-abr/playlist.m3u8"},
 {n:"ARY News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ARYnews-abr/playlist.m3u8"},
 {n:"Geo News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/geoNews-abr/playlist.m3u8"},
-{n:"HUM News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/humnews-abr/playlist.m3u8"},
 {n:"Samaa TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/samaaTV-abr/playlist.m3u8"},
-{n:"Bol News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BolNews-abr/playlist.m3u8"},
-{n:"Express News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/expressnews-abr/playlist.m3u8"},
-{n:"Aaj News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/AajNews-abr/playlist.m3u8"},
-{n:"KTN News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/ktnNews-abr/playlist.m3u8"},
-{n:"Sindh News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SindhNews-abr/playlist.m3u8"},
-{n:"PTV Home",u:"https://cdn23lhr.tamashaweb.com:8087/jazzauth/PTVHome-abr/playlist.m3u8"},
-{n:"PTV World",u:"https://cdn22lhr.tamashaweb.com:8087/jazzauth/PTVWorld-abr/playlist.m3u8"},
-{n:"PTV National",u:"https://cdn22lhr.tamashaweb.com:8087/jazzauth/PTVNational-abr/playlist.m3u8"},
-{n:"PTV Sports",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/PTVSports-abr/playlist.m3u8"},
-{n:"PTV News",u:"https://cdn23lhr.tamashaweb.com:8087/jazzauth/PTVNews-abr/playlist.m3u8"},
-{n:"365 News",u:"https://cdn22lhr.tamashaweb.com:8087/jazzauth/365News-abr/playlist.m3u8"},
-{n:"A1 TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/A1TV-abr/live/vsat-124L/chunks.m3u8"},
-{n:"8XM",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/8xm-abr/playlist.m3u8"},
-{n:"Jalwa",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/jalwa-abr/playlist.m3u8"},
-{n:"Mehran TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/MehranTV-abr/playlist.m3u8"},
+{n:"Cartoon Network",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"},
 {n:"Nick Jr",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Nick-Jr-abr/playlist.m3u8"},
-{n:"Nick India",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Nick-India-abr/playlist.m3u8"},
-{n:"Cartoon Net",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/cartoonnetwork-abr/playlist.m3u8"},
-{n:"Baby TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/BabyTV-abr/playlist.m3u8"},
-{n:"Movie One",u:"https://cdn21lhr.tamashaweb.com:8087/jazzauth/MovieOne-abr/playlist.m3u8"},
-{n:"Ten Sports",u:"https://cdn4aws.tamashaweb.com/out/v1/fae477677d214561b1601c23c95fe20a/index.m3u8"},
-{n:"EPL",u:"https://cdn06khi.tamashaweb.com:8087/YlUHeDQb7a/EPL-A-abr/playlist.m3u8"},
-{n:"Eurosport",u:"https://cdn22lhr.tamashaweb.com:8087/jazzauth/Eurosport-abr/playlist.m3u8"},
 {n:"Al Jazeera",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/AL-Jazeera-abr/playlist.m3u8"},
-{n:"Dawn News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/DawnNews-abr/playlist.m3u8"},
-{n:"Suno News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Suno_News-abr/playlist.m3u8"},
-{n:"Neo News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/NeoNews-abr/playlist.m3u8"},
 {n:"CNN",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Livecnn-abr/playlist.m3u8"},
-{n:"Hum Masala",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/hummasala-abr/playlist.m3u8"},
-{n:"Madni Ch",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Madni-abr/playlist.m3u8"},
-{n:"GNN",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/GNN-abr/playlist.m3u8"},
-{n:"24 News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/24News-abr/playlist.m3u8"},
-{n:"Such TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SachTV/playlist.m3u8"},
-{n:"Lahore Rang",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/LahoreRung-abr/playlist.m3u8"},
-{n:"City 42",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/city42(vnw)-abr/playlist.m3u8"},
-{n:"Afghan TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/AfghanTV-abr/playlist.m3u8"},
-{n:"Khyber News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/KhyberNews-abr/playlist.m3u8"},
-{n:"Saudi Sunnah",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/SaudiSunnah(NW)-abr/playlist.m3u8"},
-{n:"Waseeb",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/waseeb-abr/playlist.m3u8"},
-{n:"City 41",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/city41News-abr/playlist.m3u8"},
-{n:"Makkah",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Saudimakkah(nw)-abr/playlist.m3u8"},
 {n:"DW News",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/DWNews-abr/playlist.m3u8"},
-{n:"Champion TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/championtv-abr/playlist.m3u8"},
-{n:"Kay2",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Kay2-abr/playlist.m3u8"},
-{n:"PNN",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/PNN-abr/playlist.m3u8"},
-{n:"ASIA CUP",u:"https://cdn2aws.tamashaweb.com/out/v1/bbe6ba6d0d1c47fbb8042a49b64db630/index.m3u8"},
-{n:"MMA",u:"https://cdn08khi.tamashaweb.com:8087/jazzauth/MMA-abr/playlist.m3u8"},
-{n:"Discovery HD",u:"https://cdn23lhr.tamashaweb.com:8087/jazzauth/DiscoveryHD-abr/playlist.m3u8"},
-{n:"CGTN HD",u:"https://cdn23lhr.tamashaweb.com:8087/jazzauth/CgtnHD-abr/live/145M/chunks.m3u8"},
-{n:"CGTN Doc",u:"https://cdn05khi.tamashaweb.com:8087/jazzauth/CgtnDocumentary-abr/playlist.m3u8"},
+{n:"Makkah",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/Saudimakkah(nw)-abr/playlist.m3u8"},
+{n:"Afghan TV",u:"https://cdn12isb.tamashaweb.com:8087/YlUHeDQb7a/AfghanTV-abr/playlist.m3u8"}
 ];
-var v=document.getElementById('v'),hls=null;
+var v=document.getElementById('v'),hls=null,msg=document.getElementById('msg'),title=document.getElementById('title');
 function mk(c){var d=document.createElement('div');d.className='c';d.textContent=c.n;d.onclick=function(){play(c,d)};return d;}
 function draw(a){var b=document.getElementById('list');b.innerHTML='';for(var i=0;i<a.length;i++)b.appendChild(mk(a[i]));}
-function play(c,el){var all=document.querySelectorAll('.c');for(var i=0;i<all.length;i++)all[i].classList.remove('active');el.classList.add('active');if(hls){hls.destroy();hls=null;}if(Hls.isSupported()){hls=new Hls();hls.loadSource(c.u);hls.attachMedia(v);hls.on(Hls.Events.MANIFEST_PARSED,function(){v.play();});}else{v.src=c.u;v.play();}}
+function play(c,el){
+  var all=document.querySelectorAll('.c');
+  for(var i=0;i<all.length;i++)all[i].classList.remove('active');
+  el.classList.add('active');
+  msg.style.display='block'; msg.textContent='⏳ Loading '+c.n+'...';
+  title.textContent='⏳ '+c.n;
+  if(hls){hls.destroy();hls=null;}
+  v.pause(); v.removeAttribute('src'); v.load();
+  if(Hls.isSupported()){
+    hls=new Hls({enableWorker:true});
+    hls.loadSource(c.u);
+    hls.attachMedia(v);
+    hls.on(Hls.Events.MANIFEST_PARSED,function(){ msg.style.display='none'; v.play(); title.textContent='▶️ '+c.n+' PLAYING - Tap for Sound'; });
+    hls.on(Hls.Events.ERROR,function(ev,data){
+      console.log(data);
+      if(data.fatal){
+        msg.textContent='❌ '+c.n+' - Try Ten Sports / ASIA CUP (✅ wale) - Ye Jazz SIM par chalega';
+        title.textContent='⚠️ '+c.n+' Failed - Try ✅ Channels';
+      }
+    });
+  } else { v.src=c.u; v.play(); msg.style.display='none'; }
+}
 function fil(){var q=document.getElementById('q').value.toLowerCase();if(!q){draw(ALL);return;}var f=ALL.filter(function(x){return x.n.toLowerCase().indexOf(q)>-1;});draw(f);}
-draw(ALL);setTimeout(function(){var f=document.querySelector('.c');if(f&&ALL[0])play(ALL[0],f);},500);
+draw(ALL);
+// Auto play first ✅ channel
+setTimeout(function(){ var first=document.querySelector('.c'); if(first) first.click(); },1000);
+v.addEventListener('click',function(){ v.muted=false; title.textContent='🔊 Sound ON'; });
 </script></body></html>
